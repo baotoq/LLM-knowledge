@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "log.md",
+                "file": "raw/articles/llm-wiki-pattern.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "log"
+              "title": "llm-wiki-pattern"
             }
           }
         ]
@@ -199,29 +199,34 @@
       "bases:Create new base": false
     }
   },
-  "active": "56e2ac65122b4af7",
+  "active": "69fc03442f589d91",
   "lastOpenFiles": [
+    "wiki/trends",
+    "wiki/papers",
+    "wiki/labs",
+    "wiki/models",
     "README.md",
+    "wiki/concepts/wiki-maintenance.md",
+    "wiki/concepts/llm-wiki-pattern.md",
+    "wiki/overview.md",
+    "raw/docs",
+    "wiki/libs",
+    "wiki/practices/wiki-maintenance.md",
+    "wiki/practices/llm-wiki-pattern.md",
+    "wiki/practices",
+    "wiki/topics/wiki-maintenance.md",
     "log.md",
     "index.md",
     "CLAUDE.md",
     "wiki/sources/llm-wiki-pattern.md",
-    "wiki/topics/wiki-maintenance.md",
     "wiki/entities/vannevar-bush.md",
     "wiki/concepts/persistent-knowledge-base.md",
     "wiki/concepts/memex.md",
     "raw/articles/llm-wiki-pattern.md",
-    "wiki/overview.md",
     "wiki/topics",
     "wiki/sources",
     "wiki/entities",
     "wiki/concepts",
-    "wiki/analyses",
-    "wiki",
-    "raw/papers",
-    "raw/notes",
-    "raw/books",
-    "raw/assets",
     "Welcome.md"
   ]
 }
