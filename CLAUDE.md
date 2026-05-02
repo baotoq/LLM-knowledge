@@ -272,6 +272,14 @@ Parse with: `grep "^## \[" log.md`
 
 ---
 
+## Installed skills and directory conventions
+
+The `.agents/skills/` directory contains `second-brain-ingest`, `second-brain-lint`, and `second-brain-query` skills. These skills assume a different wiki directory structure (`wiki/sources/`, `wiki/entities/`, `wiki/synthesis/`) that does **not** match this wiki.
+
+**This divergence is intentional.** CLAUDE.md conventions take precedence. Ignore any skill instructions that reference `wiki/sources/`, `wiki/entities/`, or `wiki/synthesis/` — those directories don't exist here and won't be created. Use the ingest/lint/query operations defined in this file instead.
+
+---
+
 ## Co-evolution
 
 This schema is a living document. As you and the user discover better conventions, update this file and log the change. The schema should always reflect how the wiki actually works.

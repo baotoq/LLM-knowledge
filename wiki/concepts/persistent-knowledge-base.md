@@ -32,7 +32,7 @@ The key distinction from standard retrieval-augmented generation (RAG): in RAG, 
 
 ## Realization in this vault
 
-The [[wiki/concepts/llm-wiki-pattern]] document describes the specific pattern instantiated here: raw sources → LLM ingest → structured wiki (models / labs / papers / concepts / trends / analyses) → index-based query.
+The [[wiki/concepts/llm-wiki-pattern]] document describes the specific pattern instantiated here: raw sources → LLM ingest → structured wiki (models / concepts / trends / tech) → index-based query.
 
 ## See also
 

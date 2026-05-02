@@ -12,9 +12,12 @@ This is the synthesis front page of this AI research second-brain. It evolves as
 
 ## Shape of the wiki
 
-**Bootstrap state.** The wiki currently contains only meta-content about the knowledge system itself. No AI research sources ingested yet.
+The wiki has two content clusters so far:
 
-- **Concepts:** [[concepts/llm-wiki-pattern]], [[concepts/persistent-knowledge-base]], [[concepts/memex]], [[concepts/wiki-maintenance]]
+- **Concepts (knowledge system meta):** [[wiki/concepts/llm-wiki-pattern]], [[wiki/concepts/persistent-knowledge-base]], [[wiki/concepts/memex]], [[wiki/concepts/wiki-maintenance]]
+- **Tech (Dapr distributed systems):** [[wiki/tech/dapr-pubsub]], [[wiki/tech/dapr-go-sdk]], [[wiki/tech/dapr-workflows]], [[wiki/tech/dapr-jobs]]
+
+No AI research sources ingested yet — models, concepts, and trends sections are still empty.
 
 ## Running thesis
 
@@ -32,7 +35,7 @@ This vault tracks where AI is going — capabilities, safety, architectures, org
 
 ## Gaps and suggested first sources
 
-- A major model technical report (GPT-4, Claude 3, Gemini) — would seed `wiki/models/` and `wiki/labs/`
+- A major model technical report (GPT-4, Claude 3, Gemini) — would seed `wiki/models/`
 - A scaling laws paper (Kaplan et al. 2020 or Hoffmann et al. 2022) — foundational concept
 - An AI safety overview (e.g. Anthropic's core views, or a survey) — seeds `wiki/trends/ai-safety`
 - *"Attention Is All You Need"* (Vaswani et al. 2017) — foundational architecture paper

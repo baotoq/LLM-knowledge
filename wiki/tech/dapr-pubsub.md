@@ -4,7 +4,6 @@ tags: [dapr, pubsub, microservices, distributed-systems, messaging, event-driven
 created: 2026-05-02
 updated: 2026-05-02
 sources: []
-raw: raw/articles/dapr-pubsub-overview.md
 ---
 
 # Dapr Pub/Sub
@@ -75,6 +74,9 @@ Pass a `namespace` value in component metadata to isolate same-app-id instances 
 
 ## See also
 
+- [[wiki/tech/dapr-go-sdk]] — Go SDK for publishing events and streaming subscriptions
+- [[wiki/tech/dapr-workflows]] — long-running orchestration building block
+- [[wiki/tech/dapr-jobs]] — scheduled job execution building block
 - [Dapr pub/sub overview](https://docs.dapr.io/developing-applications/building-blocks/pubsub/pubsub-overview/)
 - [Subscription methods](https://docs.dapr.io/developing-applications/building-blocks/pubsub/subscription-methods/)
-- Raw: `raw/ingested/articles/dapr-pubsub-overview.md`, `raw/ingested/articles/dapr-pubsub-subscription-types.md`
+- Raw: `raw/ingested/articles/dapr-pubsub-overview.md`, `raw/ingested/articles/dapr-pubsub-subscription-types.md`, `raw/ingested/articles/Publish & subscribe messaging.md`

@@ -35,5 +35,7 @@ result, _ := client.WaitForWorkflowCompletion(ctx, id, ...)
 ## See also
 
 - [[wiki/tech/dapr-go-sdk]] — Workflows are one of the Client SDK building blocks
+- [[wiki/tech/dapr-pubsub]] — another Dapr building block; pub/sub for event-driven messaging
+- [[wiki/tech/dapr-jobs]] — scheduled job execution, also via the Client SDK
 - [Dapr workflows overview](https://docs.dapr.io/developing-applications/building-blocks/workflow/)
 - Raw: `raw/ingested/articles/dapr-go-client.md`

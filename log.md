@@ -73,6 +73,17 @@ Parse with: `grep "^## \[" log.md`
 - Moved `raw/articles/Dapr Go SDK.md` → `raw/ingested/articles/Dapr Go SDK.md`
 - Updated `index.md` — added `dapr-go-sdk` to Tech section; added entry to Raw Sources Ingested
 
+## [2026-05-02] lint | Audit and fix wiki issues
+
+- Fixed wikilink format inconsistency in `wiki/overview.md` — short-form `[[concepts/...]]` → full-path `[[wiki/concepts/...]]`
+- Removed non-standard `raw:` frontmatter field from `wiki/tech/dapr-pubsub.md` and `wiki/concepts/llm-wiki-pattern.md`
+- Removed model-page style `**Author/Date/Type:**` header from `wiki/concepts/llm-wiki-pattern.md`
+- Updated `wiki/overview.md` — replaced stale "Bootstrap state" with current two-cluster description; removed deleted `wiki/labs/` reference
+- Updated `wiki/concepts/persistent-knowledge-base.md` — corrected stale category list from `models/labs/papers/concepts/trends/analyses` to `models/concepts/trends/tech`
+- Added cross-references: `wiki/tech/dapr-workflows.md` and `wiki/tech/dapr-jobs.md` now link to `dapr-pubsub`; `wiki/tech/dapr-pubsub.md` now links to `dapr-go-sdk`, `dapr-workflows`, `dapr-jobs`
+- Ingested `raw/articles/Publish & subscribe messaging.md` → `wiki/tech/dapr-pubsub` (navigation index page, content already covered); moved to `raw/ingested/articles/`
+- Updated `CLAUDE.md` — added "Installed skills and directory conventions" section noting that `second-brain-*` skill directory conventions (`wiki/sources/`, `wiki/entities/`, `wiki/synthesis/`) are intentionally superseded by this schema
+
 ## [2026-05-02] ingest | Dapr Go Client SDK + Go Service SDK
 
 - Created `raw/ingested/articles/dapr-go-client.md` — fetched from docs.dapr.io

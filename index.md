@@ -34,7 +34,7 @@ Updated by the LLM on every ingest, filed analysis, and lint pass.
 
 ### Pending
 
-- `raw/articles/Publish & subscribe messaging.md` — Dapr pub/sub overview article (uningested)
+- `raw/articles/avelinoawesome-go A curated list of awesome Go frameworks, libraries and software.md` — curated Go libraries and frameworks list
 
 ### Ingested
 
@@ -44,3 +44,4 @@ Updated by the LLM on every ingest, filed analysis, and lint pass.
 - `raw/ingested/articles/Dapr Go SDK.md` → [[wiki/tech/dapr-go-sdk]]
 - `raw/ingested/articles/dapr-go-client.md` → [[wiki/tech/dapr-go-sdk]], [[wiki/tech/dapr-workflows]], [[wiki/tech/dapr-jobs]]
 - `raw/ingested/articles/dapr-go-service.md` → [[wiki/tech/dapr-go-sdk]]
+- `raw/ingested/articles/Publish & subscribe messaging.md` → [[wiki/tech/dapr-pubsub]]

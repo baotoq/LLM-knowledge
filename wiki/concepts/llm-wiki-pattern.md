@@ -4,12 +4,9 @@ tags: [llm, knowledge-management, rag, wiki, pattern]
 created: 2026-05-02
 updated: 2026-05-02
 sources: []
-raw: raw/articles/llm-wiki-pattern.md
 ---
 
 # LLM Wiki — A Pattern for Building Personal Knowledge Bases Using LLMs
-
-**Author:** Unknown | **Date:** ~2026 | **Type:** article
 
 > An LLM incrementally builds and maintains a persistent, interlinked wiki from raw sources — replacing RAG's stateless per-query retrieval with a compounding, pre-synthesized knowledge base that gets richer with every source added.
 
