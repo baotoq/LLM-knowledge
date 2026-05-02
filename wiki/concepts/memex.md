@@ -3,12 +3,12 @@ type: concept
 tags: [knowledge-management, history, vannevar-bush, hypertext]
 created: 2026-05-02
 updated: 2026-05-02
-sources: [wiki/sources/llm-wiki-pattern]
+sources: [wiki/concepts/llm-wiki-pattern]
 ---
 
 # Memex
 
-A hypothetical personal knowledge device conceived by [[entities/vannevar-bush]] in his 1945 essay *"As We May Think"*. The Memex would let a person store all their books, records, and communications in a compressed, indexed form, and traverse them via **associative trails** — links between documents that mirror the associative nature of human thought.
+A hypothetical personal knowledge device conceived by Vannevar Bush in his 1945 essay *"As We May Think"*. The Memex would let a person store all their books, records, and communications in a compressed, indexed form, and traverse them via **associative trails** — links between documents that mirror the associative nature of human thought.
 
 ## Core idea
 
@@ -16,7 +16,7 @@ Bush's frustration was that human knowledge had grown beyond any individual's ab
 
 ## Relationship to the LLM Wiki
 
-[[wiki/sources/llm-wiki-pattern]] explicitly cites the Memex as the spiritual predecessor to the LLM Wiki pattern:
+[[wiki/concepts/llm-wiki-pattern]] explicitly cites the Memex as the spiritual predecessor to the LLM Wiki pattern:
 
 > "Bush's vision was closer to this than to what the web became: private, actively curated, with the connections between documents as valuable as the documents themselves."
 
@@ -36,6 +36,5 @@ The web generalized hyperlinks but abandoned the private, curated nature. The LL
 
 ## See also
 
-- [[wiki/entities/vannevar-bush]] — the person who conceived the Memex
 - [[wiki/concepts/persistent-knowledge-base]] — the modern realization of the Memex idea
-- [[wiki/topics/wiki-maintenance]] — the maintenance problem Bush couldn't solve
+- [[wiki/concepts/wiki-maintenance]] — the maintenance problem Bush couldn't solve

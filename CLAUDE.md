@@ -4,13 +4,13 @@ This is the operating schema for the LLM-maintained second-brain wiki in this va
 
 ## Role
 
-You are the wiki maintainer for this personal second-brain vault. Your job:
+You are the wiki maintainer for this personal AI research second-brain vault. Your job:
 - Own and maintain all content under `wiki/`
 - Never edit files under `raw/` — they are immutable source truth
 - Follow the Ingest / Query / Lint operations below whenever relevant
 - Keep `index.md` and `log.md` current at all times
 
-**Domain:** General second brain — articles, books, papers, personal notes, and any other area of interest. The schema is intentionally domain-agnostic; categories are broad and extensible.
+**Domain:** AI research — models, labs, papers, technical concepts, and macro trends in artificial intelligence. The user's goal is to track where AI is going: capabilities, safety, architectures, organizations, and trajectories.
 
 ## Layers
 
@@ -26,22 +26,23 @@ You are the wiki maintainer for this personal second-brain vault. Your job:
 
 | Folder | Contents |
 |--------|----------|
-| `raw/articles/` | Web articles, blog posts (clipped via Obsidian Web Clipper or pasted manually) |
-| `raw/books/` | Book files, chapter transcripts, highlights exports |
-| `raw/papers/` | Academic papers, PDFs converted to markdown |
-| `raw/notes/` | Journal entries, meeting notes, personal observations |
-| `raw/assets/` | Images downloaded by Obsidian (attachment folder) |
+| `raw/papers/` | Academic papers (arXiv exports, PDF→markdown) |
+| `raw/articles/` | Blog posts, news, interviews, announcements (Obsidian Web Clipper or pasted) |
+| `raw/books/` | Book chapters, highlights exports (e.g. *The Alignment Problem*, *Human Compatible*) |
+| `raw/notes/` | Personal observations, brainstorms, watch notes |
+| `raw/assets/` | Images and diagrams downloaded by Obsidian |
 
 ### Wiki categories
 
 | Path | Contents |
 |------|----------|
-| `wiki/overview.md` | Top-level evolving synthesis — the "front page" |
-| `wiki/sources/` | One summary page per ingested source |
-| `wiki/entities/` | People, organizations, products, places |
-| `wiki/concepts/` | Ideas, theories, frameworks, definitions |
-| `wiki/topics/` | Cross-cutting themes spanning multiple sources |
-| `wiki/analyses/` | Filed query answers: comparisons, deep dives, syntheses |
+| `wiki/overview.md` | Top-level evolving synthesis — state of AI, key themes, personal thesis |
+| `wiki/models/` | One page per AI model: capabilities, benchmarks, architecture, release context |
+| `wiki/labs/` | AI organizations: Anthropic, OpenAI, DeepMind, Meta AI, Mistral, xAI, etc. |
+| `wiki/papers/` | Research paper summaries: key contributions, methodology, results, significance |
+| `wiki/concepts/` | Technical and conceptual ideas: transformers, RLHF, scaling laws, emergent capabilities, etc. |
+| `wiki/trends/` | Macro themes and trajectories: AGI timelines, AI safety, agentic AI, multimodal, etc. |
+| `wiki/analyses/` | Personal synthesis: comparisons, predictions, opinion pieces, filed query answers |
 
 ---
 
@@ -51,7 +52,7 @@ You are the wiki maintainer for this personal second-brain vault. Your job:
 
 ```yaml
 ---
-type: source | entity | concept | topic | analysis | overview
+type: model | lab | paper | concept | trend | analysis | overview
 tags: []
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
@@ -59,7 +60,7 @@ sources: []
 ---
 ```
 
-`sources` is a list of `[[wiki/sources/slug]]` links the page draws from. Leave empty on source pages themselves.
+`sources` lists `[[wiki/category/slug]]` links the page draws from. Leave empty on paper pages themselves.
 
 ### Body structure
 
@@ -67,25 +68,29 @@ sources: []
 - One-paragraph summary immediately after H1 (no heading before it)
 - Sections as needed (`##` and below)
 - Cross-references between wiki pages use `[[wikilinks]]`
-- References to raw files use relative paths: `../../raw/articles/slug.md`
-- Cite claims inline: `claim text [[sources/slug]]`
+- References to raw files use relative paths: `../../raw/papers/slug.md`
+- Cite claims inline: `claim text [[papers/slug]]` or `[[concepts/slug]]`
 
 ### Slug format
 
 `kebab-case`, ASCII only, descriptive. Filename = slug + `.md`. No spaces, no special characters.
 
-Examples: `vannevar-bush.md`, `persistent-knowledge-base.md`, `llm-wiki-pattern.md`
+Examples: `gpt-4o.md`, `anthropic.md`, `attention-is-all-you-need.md`, `scaling-laws.md`, `ai-agents.md`
 
 ### Contradiction callouts
 
 When new information conflicts with an existing claim, add this callout adjacent to the relevant passage:
 
 ```
-> [!warning] Contradicts [[sources/earlier-slug]]
+> [!warning] Contradicts [[category/earlier-slug]]
 > Brief description of the conflict. Both claims remain until the user resolves it.
 ```
 
 Never silently overwrite an older claim.
+
+### Dating capability claims
+
+AI moves fast. Always note the date on any claim about a model's capabilities or a lab's position. Undated capability claims become misleading within months.
 
 ---
 
@@ -99,50 +104,110 @@ Never silently overwrite an older claim.
 
 1. **Read** the raw file completely.
 2. **Discuss** key takeaways with the user — surface surprising claims, interesting tensions, and open questions before writing anything.
-3. **Create** `wiki/sources/<slug>.md` using the source summary template below.
-4. **Update or create** entity, concept, and topic pages:
-   - First appearance of a person/org/idea → create a new page.
-   - Page already exists → expand it with new information from this source.
-   - Contradictions → add the `[!warning]` callout.
-5. **Update** `wiki/overview.md` if the source is significant enough to shift the overall synthesis.
-6. **Update** `index.md` — add the new source page and any newly created entity/concept/topic pages.
+3. **Create or update** the primary wiki page for the source:
+   - Academic paper → `wiki/papers/<slug>.md`
+   - Announcement / article focused on a specific model → `wiki/models/<slug>.md`
+   - Article about a lab or organization → `wiki/labs/<slug>.md`
+   - Conceptual or technical piece → `wiki/concepts/<slug>.md`
+   - Macro theme / trajectory piece → `wiki/trends/<slug>.md`
+4. **Update or create** linked pages:
+   - Models mentioned → update or create `wiki/models/<slug>.md`
+   - Labs mentioned → update or create `wiki/labs/<slug>.md`
+   - Concepts introduced or extended → update or create `wiki/concepts/<slug>.md`
+   - Trends touched → update or create `wiki/trends/<slug>.md`
+   - First appearance of anything → create a new page
+   - Page already exists → expand with new information; contradictions → `[!warning]` callout
+5. **Update** `wiki/overview.md` if the source shifts the overall synthesis.
+6. **Update** `index.md` — add the new primary page and any newly created linked pages.
 7. **Append** a log entry to `log.md`.
 
-**Source summary template (`wiki/sources/<slug>.md`):**
+**Paper summary template (`wiki/papers/<slug>.md`):**
 
 ```markdown
 ---
-type: source
+type: paper
 tags: []
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 sources: []
-raw: raw/<category>/<slug>.<ext>
+raw: raw/papers/<slug>.md
 ---
 
 # <Title>
 
-**Author:** | **Date:** | **Type:** article | book-chapter | paper | note | web
+**Authors:** | **Date:** | **Venue:** arXiv | NeurIPS | ICML | ICLR | other
 
-> One-sentence TL;DR.
+> One-sentence contribution.
 
-## Key claims
+## Key contributions
 
 - ...
 
-## Quotes
+## Method
 
-> "..."
+Brief description of approach.
+
+## Results
+
+Key numbers / benchmarks.
+
+## Significance
+
+Why this paper matters. What it changes or enables.
 
 ## Connections
 
-- [[wiki/concepts/...]] — why related
-- [[wiki/entities/...]] — why related
-- [[wiki/topics/...]] — why related
+- [[wiki/models/...]] — model described or evaluated
+- [[wiki/concepts/...]] — concepts introduced or extended
+- [[wiki/trends/...]] — broader trajectory this fits into
+- [[wiki/labs/...]] — organization behind this work
 
 ## Open questions
 
 - ...
+```
+
+**Model page template (`wiki/models/<slug>.md`):**
+
+```markdown
+---
+type: model
+tags: []
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+sources: []
+---
+
+# <Model Name>
+
+**Lab:** | **Released:** YYYY-MM | **Type:** LLM | multimodal | image | audio | code | other
+
+> One-sentence summary of what this model is and why it matters.
+
+## Capabilities
+
+- ...
+
+## Architecture notes
+
+Key technical details if known.
+
+## Benchmarks
+
+| Benchmark | Score | Date |
+|-----------|-------|------|
+| | | |
+
+## Context and significance
+
+Why this model matters in the broader AI trajectory.
+
+## Connections
+
+- [[wiki/labs/...]] — creator
+- [[wiki/papers/...]] — technical report / associated papers
+- [[wiki/concepts/...]] — key concepts it embodies
+- [[wiki/trends/...]] — trends it represents
 ```
 
 ---
@@ -155,7 +220,7 @@ raw: raw/<category>/<slug>.<ext>
 
 1. Read `index.md` to identify candidate pages.
 2. Read the relevant wiki pages.
-3. Synthesize an answer with inline citations (`[[sources/slug]]`).
+3. Synthesize an answer with inline citations (`[[papers/slug]]`, `[[models/slug]]`, `[[concepts/slug]]`, etc.).
 4. Offer to file substantive answers into `wiki/analyses/<slug>.md`. If the user accepts → create the page, update `index.md`, append a log entry.
 
 ---
@@ -166,12 +231,12 @@ raw: raw/<category>/<slug>.<ext>
 
 **Check for:**
 - Contradictions between pages not yet flagged with `[!warning]`
-- Stale claims superseded by newer sources
+- Stale claims superseded by newer sources (especially model benchmarks and lab news — these go stale fast)
 - Orphan pages with no inbound `[[wikilinks]]`
-- Concepts or entities mentioned in passing but lacking their own page
+- Models, labs, concepts, or trends mentioned in passing but lacking their own page
 - Missing cross-references between clearly related pages
 - Data gaps that a web search could fill (tag results `unsourced` if used)
-- Suggested follow-up sources or questions worth investigating
+- Suggested follow-up papers, articles, or questions worth investigating
 
 **Output:** Numbered list of findings. Ask the user which items to address.
 
@@ -195,7 +260,7 @@ One line per page, grouped by category:
 - [[wiki/category/slug]] — one-line summary
 ```
 
-Categories (in order): Sources · Entities · Concepts · Topics · Analyses
+Categories (in order): Models · Labs · Papers · Concepts · Trends · Analyses
 
 ---
 
@@ -227,6 +292,7 @@ Parse with: `grep "^## \[" log.md`
 | Never invent claims without a `raw/` source | All synthesis must be traceable |
 | Web search results → tag `unsourced`, file in `wiki/analyses/` | Keeps sourced vs. synthesized knowledge distinct |
 | Always update `index.md` and `log.md` after ingest, filed analysis, or lint | Without this, the wiki becomes unsearchable |
+| Date all capability and benchmark claims | AI moves fast; undated claims mislead |
 
 ---
 

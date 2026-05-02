@@ -3,14 +3,14 @@ type: concept
 tags: [knowledge-management, llm, rag, architecture]
 created: 2026-05-02
 updated: 2026-05-02
-sources: [wiki/sources/llm-wiki-pattern]
+sources: [wiki/concepts/llm-wiki-pattern]
 ---
 
 # Persistent Knowledge Base
 
 A knowledge base that **accumulates synthesized structure over time** rather than re-deriving answers from raw documents at every query.
 
-The key distinction from standard retrieval-augmented generation (RAG): in RAG, the LLM is a stateless processor — it reads raw chunks and generates an answer at query time, then discards everything. A persistent knowledge base compiles the knowledge *once*, integrating new sources into an evolving wiki of summaries, entity pages, and cross-references. Subsequent queries read the pre-synthesized wiki rather than raw documents.
+The key distinction from standard retrieval-augmented generation (RAG): in RAG, the LLM is a stateless processor — it reads raw chunks and generates an answer at query time, then discards everything. A persistent knowledge base compiles the knowledge *once*, integrating new sources into an evolving wiki of summaries, concept pages, and cross-references. Subsequent queries read the pre-synthesized wiki rather than raw documents.
 
 ## Properties
 
@@ -32,9 +32,9 @@ The key distinction from standard retrieval-augmented generation (RAG): in RAG, 
 
 ## Realization in this vault
 
-The [[wiki/sources/llm-wiki-pattern]] document describes the specific pattern instantiated here: raw sources → LLM ingest → structured wiki (entities / concepts / topics / analyses) → index-based query.
+The [[wiki/concepts/llm-wiki-pattern]] document describes the specific pattern instantiated here: raw sources → LLM ingest → structured wiki (models / labs / papers / concepts / trends / analyses) → index-based query.
 
 ## See also
 
 - [[wiki/concepts/memex]] — 1945 precursor concept by Vannevar Bush
-- [[wiki/topics/wiki-maintenance]] — why human-maintained wikis fail; how LLMs change the economics
+- [[wiki/concepts/wiki-maintenance]] — why human-maintained wikis fail; how LLMs change the economics

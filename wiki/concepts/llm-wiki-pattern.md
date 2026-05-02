@@ -1,5 +1,5 @@
 ---
-type: source
+type: concept
 tags: [llm, knowledge-management, rag, wiki, pattern]
 created: 2026-05-02
 updated: 2026-05-02
@@ -21,7 +21,6 @@ raw: raw/articles/llm-wiki-pattern.md
 - `index.md` (content catalog) + `log.md` (append-only event log) are the two navigation primitives; the index avoids the need for embedding-based RAG even at ~100 sources / hundreds of pages
 - Good query answers should be filed back into the wiki as `wiki/analyses/` pages — explorations compound the knowledge base just like ingested sources do
 - The human's role: curate sources, direct analysis, ask good questions. The LLM's role: everything else (summarizing, cross-referencing, bookkeeping)
-- Analogous in spirit to [[entities/vannevar-bush]]'s [[concepts/memex]] (1945): private, actively curated, associative trails. The gap Bush couldn't close was **who does the maintenance** — the LLM closes it
 
 ## Quotes
 
@@ -37,13 +36,11 @@ raw: raw/articles/llm-wiki-pattern.md
 
 - [[wiki/concepts/persistent-knowledge-base]] — the central concept this pattern instantiates
 - [[wiki/concepts/memex]] — Bush's 1945 precursor; the wiki pattern is its practical realization
-- [[wiki/entities/vannevar-bush]] — originator of the Memex concept cited in the source
-- [[wiki/topics/wiki-maintenance]] — the maintenance problem that kills community wikis; LLMs solve it
-- [[wiki/overview]] — this source is the founding document of this wiki; overview should reference it
+- [[wiki/concepts/wiki-maintenance]] — the maintenance problem that kills community wikis; LLMs solve it
 
 ## Open questions
 
-- At what scale does `index.md`-based navigation break down, and when should `qmd` or an MCP search tool be added?
+- At what scale does `index.md`-based navigation break down, and when should a search tool be added?
 - How do you handle image-heavy sources where the LLM can't read the full document in one pass?
 - What does the schema look like for team/multi-author wikis with human review loops?
-- How should the wiki handle time-sensitive sources (news, market data) that become stale quickly?
+- How should the wiki handle time-sensitive sources (news, benchmarks) that become stale quickly?

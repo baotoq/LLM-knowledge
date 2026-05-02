@@ -8,25 +8,31 @@ sources: []
 
 # Overview
 
-This is the synthesis front page of the wiki. It evolves as sources are ingested and knowledge accumulates.
+This is the synthesis front page of this AI research second-brain. It evolves as sources are ingested and understanding accumulates.
 
 ## Shape of the wiki
 
-**1 source ingested.** The wiki currently contains:
+**Bootstrap state.** The wiki currently contains only meta-content about the knowledge system itself. No AI research sources ingested yet.
 
-- **Sources:** [[sources/llm-wiki-pattern]] — the founding pattern document
-- **Concepts:** [[concepts/persistent-knowledge-base]], [[concepts/memex]]
-- **Entities:** [[entities/vannevar-bush]]
-- **Topics:** [[topics/wiki-maintenance]]
-
-The wiki is seeded around a single core idea: using LLMs to maintain a personal knowledge base. Everything else grows from here.
+- **Concepts:** [[concepts/llm-wiki-pattern]], [[concepts/persistent-knowledge-base]], [[concepts/memex]], [[concepts/wiki-maintenance]]
 
 ## Running thesis
 
-Knowledge management tools fail at maintenance, not at storage. The LLM Wiki pattern solves this by making the LLM the maintainer — the human curates sources and asks questions; the LLM does the bookkeeping. The result compounds: each new source enriches an already-structured wiki rather than adding to an undifferentiated pile.
+*(To be developed as sources accumulate.)*
 
-## Gaps and next sources
+This vault tracks where AI is going — capabilities, safety, architectures, organizations, and trajectories. The goal is not to collect links but to build a living synthesis: a structured understanding that sharpens with every paper read, every announcement analyzed, every trend mapped.
 
-- *"As We May Think"* by Vannevar Bush (1945) — the primary source for the Memex; currently only referenced secondhand
-- A source on RAG systems (e.g. a technical overview) — would let the persistent-knowledge-base concept page sharpen its contrast
-- Case studies of community wikis (e.g. Tolkien Gateway) — would enrich the wiki-maintenance topic page
+## Key questions driving the research
+
+- What is the current frontier of AI capabilities, and how fast is it moving?
+- Which labs are leading in which dimensions, and why?
+- What are the plausible AGI timelines, and what evidence shifts them?
+- Where are the unsolved problems — alignment, reasoning, reliability, embodiment?
+- What does the AI landscape look like in 2 years? 5 years?
+
+## Gaps and suggested first sources
+
+- A major model technical report (GPT-4, Claude 3, Gemini) — would seed `wiki/models/` and `wiki/labs/`
+- A scaling laws paper (Kaplan et al. 2020 or Hoffmann et al. 2022) — foundational concept
+- An AI safety overview (e.g. Anthropic's core views, or a survey) — seeds `wiki/trends/ai-safety`
+- *"Attention Is All You Need"* (Vaswani et al. 2017) — foundational architecture paper

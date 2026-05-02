@@ -28,3 +28,15 @@ Parse with: `grep "^## \[" log.md`
 - Created `wiki/topics/wiki-maintenance.md` — why wikis fail; how LLMs change the maintenance economics
 - Updated `index.md` — added all 5 new wiki pages
 - Updated `wiki/overview.md` — seeded with founding source reference
+
+## [2026-05-02] schema-update | Restructure for AI research second-brain
+
+- Rewrote `CLAUDE.md` — domain narrowed to AI research; new wiki categories: models / labs / papers / concepts / trends / analyses; new templates for paper and model pages; added "date all capability claims" constraint
+- Created `wiki/models/`, `wiki/labs/`, `wiki/papers/`, `wiki/trends/` — new AI research category folders
+- Moved `wiki/sources/llm-wiki-pattern.md` → `wiki/concepts/llm-wiki-pattern.md` (type: concept)
+- Moved `wiki/topics/wiki-maintenance.md` → `wiki/concepts/wiki-maintenance.md` (type: concept)
+- Deleted `wiki/entities/vannevar-bush.md` — entity category removed; person referenced inline in concept pages
+- Removed folders: `wiki/sources/`, `wiki/entities/`, `wiki/topics/`, `wiki/libs/`, `wiki/practices/`, `raw/docs/`
+- Updated all internal wikilinks across concept pages to reflect new paths
+- Updated `wiki/overview.md` — reframed for AI research with key driving questions and suggested first sources
+- Updated `index.md` — new category order: Models · Labs · Papers · Concepts · Trends · Analyses

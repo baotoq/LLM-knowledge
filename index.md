@@ -6,22 +6,28 @@ Updated by the LLM on every ingest, filed analysis, and lint pass.
 
 ---
 
-## Sources
+## Models
 
-- [[wiki/sources/llm-wiki-pattern]] — pattern document describing the LLM Wiki idea, three-layer architecture, and ingest/query/lint operations
+*(none yet)*
 
-## Entities
+## Labs
 
-- [[wiki/entities/vannevar-bush]] — engineer who conceived the Memex (1945); intellectual ancestor of the LLM Wiki pattern
+*(none yet)*
+
+## Papers
+
+*(none yet)*
 
 ## Concepts
 
+- [[wiki/concepts/llm-wiki-pattern]] — the LLM-maintained wiki pattern: ingest/query/lint operations, three-layer architecture, compounding knowledge base
 - [[wiki/concepts/persistent-knowledge-base]] — knowledge base that compiles synthesis once and accumulates it, contrasted with stateless RAG
-- [[wiki/concepts/memex]] — Bush's 1945 vision of a private, associative-trail personal knowledge device
+- [[wiki/concepts/memex]] — Bush's 1945 vision of a private, associative-trail personal knowledge device; spiritual ancestor of this wiki
+- [[wiki/concepts/wiki-maintenance]] — why wikis fail at maintenance and how LLMs change the economics
 
-## Topics
+## Trends
 
-- [[wiki/topics/wiki-maintenance]] — why maintenance burden kills wikis and how LLMs change the economics
+*(none yet)*
 
 ## Analyses
 
