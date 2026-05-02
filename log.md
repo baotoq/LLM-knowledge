@@ -73,6 +73,13 @@ Parse with: `grep "^## \[" log.md`
 - Moved `raw/articles/Dapr Go SDK.md` → `raw/ingested/articles/Dapr Go SDK.md`
 - Updated `index.md` — added `dapr-go-sdk` to Tech section; added entry to Raw Sources Ingested
 
+## [2026-05-02] ingest | Awesome Go — curated Go ecosystem reference
+
+- Created `wiki/tech/awesome-go.md` — curated summary of avelino/awesome-go focusing on AI/LLM tooling, distributed systems, messaging, and workflow frameworks
+- Key observations: Go AI ecosystem active but 12–18 months behind Python; Temporal is main Dapr Workflows alternative; Watermill is main library-native Dapr pub/sub alternative; NATS has rich Go ecosystem
+- Moved `raw/articles/avelinoawesome-go A curated list of awesome Go frameworks, libraries and software.md` → `raw/ingested/articles/`
+- Updated `index.md` — added `awesome-go` to Tech section; updated Raw Sources
+
 ## [2026-05-02] lint | Audit and fix wiki issues
 
 - Fixed wikilink format inconsistency in `wiki/overview.md` — short-form `[[concepts/...]]` → full-path `[[wiki/concepts/...]]`

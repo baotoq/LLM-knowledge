@@ -27,6 +27,7 @@ Updated by the LLM on every ingest, filed analysis, and lint pass.
 - [[wiki/tech/dapr-go-sdk]] — Dapr Go SDK: Client (app→Dapr) covers all building blocks; Service/Callback (Dapr→app) via HTTP or gRPC
 - [[wiki/tech/dapr-workflows]] — Dapr workflow worker pattern: register → start worker → schedule/wait via client
 - [[wiki/tech/dapr-jobs]] — Dapr Jobs API (alpha): cron scheduling with retry policy and TTL via Dapr sidecar
+- [[wiki/tech/awesome-go]] — curated Go ecosystem reference: AI/LLM tooling, distributed systems, messaging, workflow frameworks
 
 ---
 
@@ -34,7 +35,7 @@ Updated by the LLM on every ingest, filed analysis, and lint pass.
 
 ### Pending
 
-- `raw/articles/avelinoawesome-go A curated list of awesome Go frameworks, libraries and software.md` — curated Go libraries and frameworks list
+*(none)*
 
 ### Ingested
 
@@ -45,3 +46,4 @@ Updated by the LLM on every ingest, filed analysis, and lint pass.
 - `raw/ingested/articles/dapr-go-client.md` → [[wiki/tech/dapr-go-sdk]], [[wiki/tech/dapr-workflows]], [[wiki/tech/dapr-jobs]]
 - `raw/ingested/articles/dapr-go-service.md` → [[wiki/tech/dapr-go-sdk]]
 - `raw/ingested/articles/Publish & subscribe messaging.md` → [[wiki/tech/dapr-pubsub]]
+- `raw/ingested/articles/avelinoawesome-go A curated list of awesome Go frameworks, libraries and software.md` → [[wiki/tech/awesome-go]]
