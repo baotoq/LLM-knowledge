@@ -34,4 +34,5 @@ resp, err := client.ScheduleJobAlpha1(ctx, &dapr.Job{
 - [[wiki/tech/dapr-go-sdk]] — Jobs is one of the Client SDK building blocks
 - [[wiki/tech/dapr-pubsub]] — another Dapr building block; event-driven messaging
 - [[wiki/tech/dapr-workflows]] — long-running orchestration, also via the Client SDK
-- Raw: `raw/ingested/articles/dapr-go-client.md`
+**Raw sources:**
+- [[raw/ingested/articles/dapr-go-client]]

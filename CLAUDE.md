@@ -76,7 +76,7 @@ sources: []
 - One-paragraph summary immediately after H1 (no heading before it)
 - Sections as needed (`##` and below)
 - Cross-references between wiki pages use `[[wikilinks]]`
-- References to raw files use relative paths: `../../raw/papers/slug.md`
+- References to raw files use `[[wikilinks]]` (vault-root path, no `.md`): `[[raw/ingested/articles/slug]]` — this makes them clickable in Obsidian
 - Cite claims inline: `claim text [[papers/slug]]` or `[[concepts/slug]]`
 
 ### Slug format

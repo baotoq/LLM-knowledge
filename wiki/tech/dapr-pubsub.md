@@ -2,7 +2,7 @@
 type: tech
 tags: [dapr, pubsub, microservices, distributed-systems, messaging, event-driven]
 created: 2026-05-02
-updated: 2026-05-02
+updated: 2026-05-03
 sources: []
 ---
 
@@ -66,6 +66,46 @@ Pass a `namespace` value in component metadata to isolate same-app-id instances 
 - **Bulk publish/subscribe** — batch multiple messages in one API call for throughput
 - **StatefulSet scaling** — use `{podName}` as `consumerID` in Kubernetes for sticky partition assignment
 
+## Component configuration
+
+The broker is configured entirely in a YAML component file — no application code changes needed to swap brokers:
+
+```yaml
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: orderpubsub       # name used in application code
+spec:
+  type: pubsub.redis      # swap this to change brokers
+  version: v1
+  metadata:
+  - name: redisHost
+    value: localhost:6379
+  - name: redisPassword
+    value: ""
+scopes:                   # optional: restrict to specific app IDs
+  - orderprocessing
+  - checkout
+```
+
+## Go SDK signatures (2026-05-03)
+
+```go
+// Subscriber — event handler function signature
+func eventHandler(ctx context.Context, e *common.TopicEvent) (retry bool, err error) {
+    fmt.Println("Subscriber received: ", e.Data)
+    return false, nil
+}
+
+// Publisher
+client, _ := dapr.NewClient()
+if err := client.PublishEvent(ctx, PUBSUB_NAME, PUBSUB_TOPIC, []byte(orderJSON)); err != nil {
+    panic(err)
+}
+```
+
+Return `true` from the event handler to signal Dapr to retry delivery; return `false` with a nil error to acknowledge success.
+
 ## Gotchas
 
 - Competing consumers is **not universal** — check your broker supports it before relying on it
@@ -79,4 +119,8 @@ Pass a `namespace` value in component metadata to isolate same-app-id instances 
 - [[wiki/tech/dapr-jobs]] — scheduled job execution building block
 - [Dapr pub/sub overview](https://docs.dapr.io/developing-applications/building-blocks/pubsub/pubsub-overview/)
 - [Subscription methods](https://docs.dapr.io/developing-applications/building-blocks/pubsub/subscription-methods/)
-- Raw: `raw/ingested/articles/dapr-pubsub-overview.md`, `raw/ingested/articles/dapr-pubsub-subscription-types.md`, `raw/ingested/articles/Publish & subscribe messaging.md`
+**Raw sources:**
+- [[raw/ingested/articles/dapr-pubsub-overview]]
+- [[raw/ingested/articles/dapr-pubsub-subscription-types]]
+- [[raw/ingested/articles/Publish & subscribe messaging]]
+- [[raw/ingested/articles/Quickstart Publish and Subscribe]]

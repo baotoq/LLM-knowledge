@@ -73,6 +73,13 @@ Parse with: `grep "^## \[" log.md`
 - Moved `raw/articles/Dapr Go SDK.md` → `raw/ingested/articles/Dapr Go SDK.md`
 - Updated `index.md` — added `dapr-go-sdk` to Tech section; added entry to Raw Sources Ingested
 
+## [2026-05-03] ingest | Dapr Workflow Quickstart
+
+- Updated `wiki/tech/dapr-workflows.md` — major expansion: Go API discrepancy (NewWorker vs NewRegistry pattern), external event handling with WaitForExternalEvent, full workflow management CLI (list/history/raise-event/suspend/resume/purge), Redis production warning, purge-requires-running-client gotcha
+- Added [!warning] callout for API pattern discrepancy between earlier and current Go SDK docs
+- Moved `raw/articles/Quickstart Workflow.md` → `raw/ingested/articles/`
+- Updated `index.md` — added raw file to Ingested
+
 ## [2026-05-02] ingest | Awesome Go — curated Go ecosystem reference
 
 - Created `wiki/tech/awesome-go.md` — curated summary of avelino/awesome-go focusing on AI/LLM tooling, distributed systems, messaging, and workflow frameworks
@@ -90,6 +97,27 @@ Parse with: `grep "^## \[" log.md`
 - Added cross-references: `wiki/tech/dapr-workflows.md` and `wiki/tech/dapr-jobs.md` now link to `dapr-pubsub`; `wiki/tech/dapr-pubsub.md` now links to `dapr-go-sdk`, `dapr-workflows`, `dapr-jobs`
 - Ingested `raw/articles/Publish & subscribe messaging.md` → `wiki/tech/dapr-pubsub` (navigation index page, content already covered); moved to `raw/ingested/articles/`
 - Updated `CLAUDE.md` — added "Installed skills and directory conventions" section noting that `second-brain-*` skill directory conventions (`wiki/sources/`, `wiki/entities/`, `wiki/synthesis/`) are intentionally superseded by this schema
+
+## [2026-05-03] schema-update | Raw file references use wikilinks
+
+- Updated `CLAUDE.md` — changed raw file reference convention from relative paths to `[[wikilinks]]` so they are clickable in Obsidian
+- Updated all 8 `wiki/tech/` pages to use the new format
+
+## [2026-05-03] ingest | Dapr Workflows — full documentation batch (9 articles)
+
+- Updated `wiki/tech/dapr-workflows.md` — major rewrite: determinism rules (CurrentUTCDateTime, no goroutines, no direct I/O), retry policy (Go example with RetryPolicy struct), multi-app workflows (WithActivityAppID/WithChildWorkflowAppID, v1.16+, WorkflowsRemoteActivityReminder feature gate v1.17), full CLI section (run/rerun/terminate/purge with all flags), scheduler reminder management (dapr scheduler list/get/delete/export/import), concurrency limits config, history retention policy config, architecture internals (gRPC pull model, two actor types, state store key structure, throughput trick with WithStartTime)
+- Created `wiki/tech/dapr-workflow-patterns.md` — five workflow patterns with Go examples: task chaining, fan-out/fan-in (workflow.NewTaskSlice), monitor (ContinueAsNew — never use for{}), external system interaction (WaitForExternalEvent with timeout), compensation/saga (reverse-order activity rollback); async HTTP API pattern
+- Updated `wiki/tech/dapr-pubsub.md` — added component YAML template, Go subscriber/publisher function signatures (eventHandler, PublishEvent), updated raw sources list
+- Moved 10 raw articles to `raw/ingested/articles/`: Workflow overview, Workflow architecture, Features and concepts, How to Author a workflow, How to Manage workflows, Multi Application Workflows, Workflow Execution Concurrency, History Retention Policy, Workflow patterns, Quickstart Publish and Subscribe
+- Updated `index.md` — added dapr-workflow-patterns to Tech section; updated dapr-workflows description; added all 10 raw files to Raw Sources Ingested
+
+## [2026-05-03] ingest | Dapr Actors — overview and quickstart
+
+- Created `wiki/tech/dapr-actors.md` — virtual actor pattern, turn-based concurrency, placement service, timers vs reminders, actors vs workflows decision guide, actors-as-workflow-foundation relationship
+- Updated `wiki/tech/dapr-workflows.md` — added cross-reference to dapr-actors in architecture internals (actor types section) and See also
+- Moved `raw/articles/Actors overview.md` → `raw/ingested/articles/`
+- Moved `raw/articles/Quickstart Actors.md` → `raw/ingested/articles/`
+- Updated `index.md` — added dapr-actors to Tech section; added both raw files to Raw Sources Ingested
 
 ## [2026-05-02] ingest | Dapr Go Client SDK + Go Service SDK
 

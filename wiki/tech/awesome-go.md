@@ -72,15 +72,15 @@ Both `Temporal` and [[wiki/tech/dapr-workflows]] solve fault-tolerant long-runni
 
 ## Messaging
 
-| Library | What it does |
-|---------|-------------|
-| `Watermill` | Event-driven apps, event sourcing, CQRS, sagas — works with Kafka, RabbitMQ, HTTP, MySQL binlog |
-| `NATS Go Client` | Official Go client for NATS (also a [[wiki/tech/dapr-pubsub]] broker) |
-| `sarama` | Shopify's Apache Kafka client |
-| `Asynq` | Distributed task queue on Redis |
-| `machinery` | Async task queue via distributed message passing |
-| `Watermill` | Strong alternative to Dapr pub/sub for event-driven Go apps without a sidecar |
-| `Go-MediatR` | Mediator + CQRS patterns for event-driven architecture |
+| Library          | What it does                                                                                    |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| `Watermill`      | Event-driven apps, event sourcing, CQRS, sagas — works with Kafka, RabbitMQ, HTTP, MySQL binlog |
+| `NATS Go Client` | Official Go client for NATS (also a [[wiki/tech/dapr-pubsub]] broker)                           |
+| `sarama`         | Shopify's Apache Kafka client                                                                   |
+| `Asynq`          | Distributed task queue on Redis                                                                 |
+| `machinery`      | Async task queue via distributed message passing                                                |
+| `Watermill`      | Strong alternative to Dapr pub/sub for event-driven Go apps without a sidecar                   |
+| `Go-MediatR`     | Mediator + CQRS patterns for event-driven architecture                                          |
 
 ### Watermill vs Dapr Pub/Sub
 
@@ -109,4 +109,5 @@ Both `Temporal` and [[wiki/tech/dapr-workflows]] solve fault-tolerant long-runni
 - [[wiki/tech/dapr-workflows]] — Dapr's workflow building block; Temporal is the main alternative
 - [[wiki/tech/dapr-go-sdk]] — official Go SDK for Dapr
 - [avelino/awesome-go](https://github.com/avelino/awesome-go) — full canonical list
-- Raw: `raw/ingested/articles/avelinoawesome-go A curated list of awesome Go frameworks, libraries and software.md`
+**Raw sources:**
+- [[raw/ingested/articles/avelinoawesome-go A curated list of awesome Go frameworks, libraries and software]]

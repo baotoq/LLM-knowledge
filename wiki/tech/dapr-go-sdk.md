@@ -69,4 +69,7 @@ Follows gRPC's richer error model — parse status codes, messages, and detail o
 - [[wiki/tech/dapr-jobs]] — Jobs API scheduling
 - [Go Client SDK docs](https://docs.dapr.io/developing-applications/sdks/go/go-client/)
 - [Go Service SDK docs](https://docs.dapr.io/developing-applications/sdks/go/go-service/)
-- Raw: `raw/ingested/articles/Dapr Go SDK.md`, `raw/ingested/articles/dapr-go-client.md`, `raw/ingested/articles/dapr-go-service.md`
+**Raw sources:**
+- [[raw/ingested/articles/Dapr Go SDK]]
+- [[raw/ingested/articles/dapr-go-client]]
+- [[raw/ingested/articles/dapr-go-service]]
