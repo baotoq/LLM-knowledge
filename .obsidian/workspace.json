@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "log.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "log"
             }
           }
         ]
@@ -201,6 +201,27 @@
   },
   "active": "56e2ac65122b4af7",
   "lastOpenFiles": [
+    "README.md",
+    "log.md",
+    "index.md",
+    "CLAUDE.md",
+    "wiki/sources/llm-wiki-pattern.md",
+    "wiki/topics/wiki-maintenance.md",
+    "wiki/entities/vannevar-bush.md",
+    "wiki/concepts/persistent-knowledge-base.md",
+    "wiki/concepts/memex.md",
+    "raw/articles/llm-wiki-pattern.md",
+    "wiki/overview.md",
+    "wiki/topics",
+    "wiki/sources",
+    "wiki/entities",
+    "wiki/concepts",
+    "wiki/analyses",
+    "wiki",
+    "raw/papers",
+    "raw/notes",
+    "raw/books",
+    "raw/assets",
     "Welcome.md"
   ]
 }
