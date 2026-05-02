@@ -77,4 +77,4 @@ Pass a `namespace` value in component metadata to isolate same-app-id instances 
 
 - [Dapr pub/sub overview](https://docs.dapr.io/developing-applications/building-blocks/pubsub/pubsub-overview/)
 - [Subscription methods](https://docs.dapr.io/developing-applications/building-blocks/pubsub/subscription-methods/)
-- Raw: `raw/articles/dapr-pubsub-overview.md`, `raw/articles/dapr-pubsub-subscription-types.md`
+- Raw: `raw/ingested/articles/dapr-pubsub-overview.md`, `raw/ingested/articles/dapr-pubsub-subscription-types.md`

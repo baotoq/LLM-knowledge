@@ -6,7 +6,8 @@ This is the operating schema for the LLM-maintained second-brain wiki in this va
 
 You are the wiki maintainer for this personal AI research second-brain vault. Your job:
 - Own and maintain all content under `wiki/`
-- Never edit files under `raw/` — they are immutable source truth
+- Never edit content in `raw/` files — they are immutable source truth
+- Moving files from `raw/<category>/` to `raw/ingested/<category>/` during ingest is the only allowed raw/ operation
 - Follow the Ingest / Query / Lint operations below whenever relevant
 - Keep `index.md` and `log.md` current at all times
 
@@ -16,7 +17,7 @@ You are the wiki maintainer for this personal AI research second-brain vault. Yo
 
 | Layer | Path | Owner | Mutability |
 |-------|------|-------|------------|
-| Raw sources | `raw/` | User | Immutable — LLM reads, never writes |
+| Raw sources | `raw/` | User | Content immutable — LLM reads only; may move files to `raw/ingested/` during ingest |
 | Wiki | `wiki/` | LLM | LLM-owned and maintained |
 | Schema | `CLAUDE.md` | Co-evolved | Updated by LLM with user consent; log every change |
 | Catalog | `index.md` | LLM | Updated on every ingest |
@@ -24,12 +25,22 @@ You are the wiki maintainer for this personal AI research second-brain vault. Yo
 
 ### Raw source categories
 
+**Drop zone (pending ingest):**
+
 | Folder | Contents |
 |--------|----------|
 | `raw/articles/` | Blog posts, news, interviews, announcements, papers (Obsidian Web Clipper or pasted) |
 | `raw/books/` | Book chapters, highlights exports (e.g. *The Alignment Problem*, *Human Compatible*) |
 | `raw/notes/` | Personal observations, brainstorms, watch notes |
 | `raw/assets/` | Images and diagrams downloaded by Obsidian |
+
+**After ingest (processed):**
+
+| Folder | Contents |
+|--------|----------|
+| `raw/ingested/articles/` | Articles after ingest |
+| `raw/ingested/books/` | Books after ingest |
+| `raw/ingested/notes/` | Notes after ingest |
 
 ### Wiki categories
 
@@ -113,8 +124,9 @@ AI moves fast. Always note the date on any claim about a model's capabilities or
    - First appearance of anything → create a new page
    - Page already exists → expand with new information; contradictions → `[!warning]` callout
 5. **Update** `wiki/overview.md` if the source shifts the overall synthesis.
-6. **Update** `index.md` — add the new primary page and any newly created linked pages.
-7. **Append** a log entry to `log.md`.
+6. **Update** `index.md` — add the new primary page and any newly created linked pages; move the raw file entry in Raw Sources from `### Pending` to `### Ingested` with an arrow to the primary wiki page.
+7. **Move** the raw file from `raw/<category>/filename.md` to `raw/ingested/<category>/filename.md`.
+8. **Append** a log entry to `log.md`.
 
 **Model page template (`wiki/models/<slug>.md`):**
 
@@ -211,6 +223,20 @@ One line per page, grouped by category:
 
 Categories (in order): Models · Concepts · Trends · Tech
 
+The index also maintains a **Raw Sources** section at the bottom:
+
+```
+## Raw Sources
+
+### Pending
+- `raw/<category>/filename.md` — one-line description
+
+### Ingested
+- `raw/ingested/<category>/filename.md` → [[wiki/category/slug]]
+```
+
+Multiple raw files may point to the same wiki page (e.g. two articles that fed one page).
+
 ---
 
 ## Log format (`log.md`)
@@ -235,7 +261,8 @@ Parse with: `grep "^## \[" log.md`
 
 | Rule | Reason |
 |------|--------|
-| Never edit `raw/` | Raw sources are immutable ground truth |
+| Never edit content in `raw/` files | Raw sources are immutable ground truth |
+| Only allowed raw/ operation: move files from `raw/<cat>/` → `raw/ingested/<cat>/` during ingest | Tracks ingest status physically |
 | Never delete wiki pages without explicit user confirmation | Prevents accidental loss of synthesized knowledge |
 | Never rewrite `log.md` history | The log is an audit trail |
 | Never invent claims without a `raw/` source | All synthesis must be traceable |

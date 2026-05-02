@@ -58,3 +58,26 @@ Parse with: `grep "^## \[" log.md`
 - Updated all internal wikilinks across concept pages to reflect new paths
 - Updated `wiki/overview.md` — reframed for AI research with key driving questions and suggested first sources
 - Updated `index.md` — new category order: Models · Labs · Papers · Concepts · Trends · Analyses
+
+## [2026-05-02] schema-update | Raw pending/ingested folder split
+
+- Created `raw/ingested/articles/`, `raw/ingested/books/`, `raw/ingested/notes/` — physical folders for processed sources
+- Moved already-ingested files to `raw/ingested/articles/`: `llm-wiki-pattern.md`, `dapr-pubsub-overview.md`, `dapr-pubsub-subscription-types.md`
+- Updated `CLAUDE.md` — raw source categories table, ingest steps (added move step), hard constraints, index format (Raw Sources section)
+- Updated `index.md` — added Raw Sources section with Pending/Ingested subsections
+- Updated `wiki/tech/dapr-pubsub.md` — fixed raw file paths to `raw/ingested/articles/`
+
+## [2026-05-02] ingest | Dapr Go SDK
+
+- Created `wiki/tech/dapr-go-sdk.md` — Client SDK (app→Dapr) and Service/Callback SDK (Dapr→app) overview; Client/Service split and relationship to pub/sub subscription types
+- Moved `raw/articles/Dapr Go SDK.md` → `raw/ingested/articles/Dapr Go SDK.md`
+- Updated `index.md` — added `dapr-go-sdk` to Tech section; added entry to Raw Sources Ingested
+
+## [2026-05-02] ingest | Dapr Go Client SDK + Go Service SDK
+
+- Created `raw/ingested/articles/dapr-go-client.md` — fetched from docs.dapr.io
+- Created `raw/ingested/articles/dapr-go-service.md` — fetched from docs.dapr.io
+- Updated `wiki/tech/dapr-go-sdk.md` — expanded Client SDK with full building blocks table (workflows, jobs, actors, secrets, lock, config, crypto, bindings); added Service SDK HTTP vs gRPC detail; added auth and error handling sections
+- Created `wiki/tech/dapr-workflows.md` — worker pattern: register workflow/activity functions, start worker, schedule/wait via client
+- Created `wiki/tech/dapr-jobs.md` — alpha Jobs API: cron scheduling, retry policy, TTL via `ScheduleJobAlpha1`
+- Updated `index.md` — added dapr-workflows, dapr-jobs to Tech section; added both raw files to Raw Sources Ingested

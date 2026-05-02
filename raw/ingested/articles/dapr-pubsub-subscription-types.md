@@ -2,7 +2,11 @@
 title: Dapr Pub/Sub Subscription Types
 source: https://docs.dapr.io/developing-applications/building-blocks/pubsub/subscription-methods/
 created: 2026-05-02
-tags: [dapr, pubsub, subscriptions, microservices]
+tags:
+  - dapr
+  - pubsub
+  - subscriptions
+  - microservices
 ---
 
 # Dapr Pub/Sub Subscription Types
