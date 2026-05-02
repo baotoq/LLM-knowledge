@@ -29,6 +29,24 @@ Parse with: `grep "^## \[" log.md`
 - Updated `index.md` — added all 5 new wiki pages
 - Updated `wiki/overview.md` — seeded with founding source reference
 
+## [2026-05-02] schema-update | Simplify wiki — remove labs, papers, analyses, raw/papers
+
+- Removed `wiki/labs/`, `wiki/papers/`, `wiki/analyses/`, `raw/papers/` — over-granular for current use
+- Updated `CLAUDE.md` — pruned wiki categories, raw categories, frontmatter types, ingest steps, index format
+- Updated `index.md` — removed Labs, Papers, Analyses sections
+
+## [2026-05-02] schema-update | Add wiki/tech/ category for software engineering content
+
+- Updated `CLAUDE.md` — added `wiki/tech/` category; expanded domain to cover software engineering alongside AI research; added `tech` to frontmatter type options; updated index category order
+- Created `wiki/tech/` directory
+
+## [2026-05-02] ingest | Dapr Pub/Sub
+
+- Created `raw/articles/dapr-pubsub-overview.md` — fetched from docs.dapr.io
+- Created `raw/articles/dapr-pubsub-subscription-types.md` — fetched from docs.dapr.io
+- Created `wiki/tech/dapr-pubsub.md` — broker-agnostic messaging API, three subscription types, delivery semantics, CloudEvents, competing consumers, outbox pattern, gotchas
+- Updated `index.md` — added Tech section and dapr-pubsub entry
+
 ## [2026-05-02] schema-update | Restructure for AI research second-brain
 
 - Rewrote `CLAUDE.md` — domain narrowed to AI research; new wiki categories: models / labs / papers / concepts / trends / analyses; new templates for paper and model pages; added "date all capability claims" constraint

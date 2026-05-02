@@ -10,14 +10,6 @@ Updated by the LLM on every ingest, filed analysis, and lint pass.
 
 *(none yet)*
 
-## Labs
-
-*(none yet)*
-
-## Papers
-
-*(none yet)*
-
 ## Concepts
 
 - [[wiki/concepts/llm-wiki-pattern]] — the LLM-maintained wiki pattern: ingest/query/lint operations, three-layer architecture, compounding knowledge base
@@ -29,6 +21,6 @@ Updated by the LLM on every ingest, filed analysis, and lint pass.
 
 *(none yet)*
 
-## Analyses
+## Tech
 
-*(none yet)*
+- [[wiki/tech/dapr-pubsub]] — Dapr's broker-agnostic pub/sub API: three subscription types (declarative/programmatic/streaming), at-least-once delivery, CloudEvents, competing consumers, outbox pattern

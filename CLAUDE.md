@@ -10,7 +10,7 @@ You are the wiki maintainer for this personal AI research second-brain vault. Yo
 - Follow the Ingest / Query / Lint operations below whenever relevant
 - Keep `index.md` and `log.md` current at all times
 
-**Domain:** AI research — models, labs, papers, technical concepts, and macro trends in artificial intelligence. The user's goal is to track where AI is going: capabilities, safety, architectures, organizations, and trajectories.
+**Domain:** Primarily AI research — models, labs, papers, technical concepts, and macro trends in artificial intelligence. Also covers software engineering: libraries, frameworks, distributed systems patterns, and tooling used day-to-day. The user's goal is to track where AI is going AND maintain a practical engineering reference.
 
 ## Layers
 
@@ -26,8 +26,7 @@ You are the wiki maintainer for this personal AI research second-brain vault. Yo
 
 | Folder | Contents |
 |--------|----------|
-| `raw/papers/` | Academic papers (arXiv exports, PDF→markdown) |
-| `raw/articles/` | Blog posts, news, interviews, announcements (Obsidian Web Clipper or pasted) |
+| `raw/articles/` | Blog posts, news, interviews, announcements, papers (Obsidian Web Clipper or pasted) |
 | `raw/books/` | Book chapters, highlights exports (e.g. *The Alignment Problem*, *Human Compatible*) |
 | `raw/notes/` | Personal observations, brainstorms, watch notes |
 | `raw/assets/` | Images and diagrams downloaded by Obsidian |
@@ -38,11 +37,9 @@ You are the wiki maintainer for this personal AI research second-brain vault. Yo
 |------|----------|
 | `wiki/overview.md` | Top-level evolving synthesis — state of AI, key themes, personal thesis |
 | `wiki/models/` | One page per AI model: capabilities, benchmarks, architecture, release context |
-| `wiki/labs/` | AI organizations: Anthropic, OpenAI, DeepMind, Meta AI, Mistral, xAI, etc. |
-| `wiki/papers/` | Research paper summaries: key contributions, methodology, results, significance |
 | `wiki/concepts/` | Technical and conceptual ideas: transformers, RLHF, scaling laws, emergent capabilities, etc. |
 | `wiki/trends/` | Macro themes and trajectories: AGI timelines, AI safety, agentic AI, multimodal, etc. |
-| `wiki/analyses/` | Personal synthesis: comparisons, predictions, opinion pieces, filed query answers |
+| `wiki/tech/` | Software engineering reference: libraries, frameworks, platforms, distributed systems patterns |
 
 ---
 
@@ -52,7 +49,7 @@ You are the wiki maintainer for this personal AI research second-brain vault. Yo
 
 ```yaml
 ---
-type: model | lab | paper | concept | trend | analysis | overview
+type: model | concept | trend | tech | overview
 tags: []
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
@@ -105,14 +102,12 @@ AI moves fast. Always note the date on any claim about a model's capabilities or
 1. **Read** the raw file completely.
 2. **Discuss** key takeaways with the user — surface surprising claims, interesting tensions, and open questions before writing anything.
 3. **Create or update** the primary wiki page for the source:
-   - Academic paper → `wiki/papers/<slug>.md`
    - Announcement / article focused on a specific model → `wiki/models/<slug>.md`
-   - Article about a lab or organization → `wiki/labs/<slug>.md`
-   - Conceptual or technical piece → `wiki/concepts/<slug>.md`
+   - Conceptual or technical AI piece → `wiki/concepts/<slug>.md`
    - Macro theme / trajectory piece → `wiki/trends/<slug>.md`
+   - Software library / framework / tool → `wiki/tech/<slug>.md`
 4. **Update or create** linked pages:
    - Models mentioned → update or create `wiki/models/<slug>.md`
-   - Labs mentioned → update or create `wiki/labs/<slug>.md`
    - Concepts introduced or extended → update or create `wiki/concepts/<slug>.md`
    - Trends touched → update or create `wiki/trends/<slug>.md`
    - First appearance of anything → create a new page
@@ -120,52 +115,6 @@ AI moves fast. Always note the date on any claim about a model's capabilities or
 5. **Update** `wiki/overview.md` if the source shifts the overall synthesis.
 6. **Update** `index.md` — add the new primary page and any newly created linked pages.
 7. **Append** a log entry to `log.md`.
-
-**Paper summary template (`wiki/papers/<slug>.md`):**
-
-```markdown
----
-type: paper
-tags: []
-created: YYYY-MM-DD
-updated: YYYY-MM-DD
-sources: []
-raw: raw/papers/<slug>.md
----
-
-# <Title>
-
-**Authors:** | **Date:** | **Venue:** arXiv | NeurIPS | ICML | ICLR | other
-
-> One-sentence contribution.
-
-## Key contributions
-
-- ...
-
-## Method
-
-Brief description of approach.
-
-## Results
-
-Key numbers / benchmarks.
-
-## Significance
-
-Why this paper matters. What it changes or enables.
-
-## Connections
-
-- [[wiki/models/...]] — model described or evaluated
-- [[wiki/concepts/...]] — concepts introduced or extended
-- [[wiki/trends/...]] — broader trajectory this fits into
-- [[wiki/labs/...]] — organization behind this work
-
-## Open questions
-
-- ...
-```
 
 **Model page template (`wiki/models/<slug>.md`):**
 
@@ -260,7 +209,7 @@ One line per page, grouped by category:
 - [[wiki/category/slug]] — one-line summary
 ```
 
-Categories (in order): Models · Labs · Papers · Concepts · Trends · Analyses
+Categories (in order): Models · Concepts · Trends · Tech
 
 ---
 
