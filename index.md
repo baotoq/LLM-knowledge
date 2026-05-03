@@ -30,6 +30,7 @@ Updated by the LLM on every ingest, filed analysis, and lint pass.
 - [[wiki/tech/dapr-jobs]] — Dapr Jobs API (alpha): cron scheduling with retry policy and TTL via Dapr sidecar
 - [[wiki/tech/dapr-actors]] — Dapr virtual actor building block: turn-based concurrency, actor lifetime, placement service, timers vs reminders, actors vs workflows
 - [[wiki/tech/awesome-go]] — curated Go ecosystem reference: AI/LLM tooling, distributed systems, messaging, workflow frameworks
+- [[wiki/tech/temporal]] — Temporal durable-execution platform: Workflow/Activity/Worker primitives, Go SDK surface, comparison to Dapr Workflows
 
 ---
 
@@ -41,6 +42,9 @@ Updated by the LLM on every ingest, filed analysis, and lint pass.
 
 ### Ingested
 
+- `raw/ingested/articles/Core application - Temporal feature  Temporal Platform Documentation.md` → [[wiki/tech/temporal]]
+- `raw/ingested/articles/Workflows - Go SDK  Temporal Platform Documentation.md` → [[wiki/tech/temporal]]
+- `raw/ingested/articles/Activities - Go SDK  Temporal Platform Documentation.md` → [[wiki/tech/temporal]]
 - `raw/ingested/articles/llm-wiki-pattern.md` → [[wiki/concepts/llm-wiki-pattern]]
 - `raw/ingested/articles/dapr-pubsub-overview.md` → [[wiki/tech/dapr-pubsub]]
 - `raw/ingested/articles/dapr-pubsub-subscription-types.md` → [[wiki/tech/dapr-pubsub]]

@@ -371,6 +371,7 @@ Redis (the default state store in Dapr quickstarts) does not support transaction
 - [[wiki/tech/dapr-go-sdk]] — Workflows are one of the Client SDK building blocks
 - [[wiki/tech/dapr-pubsub]] — another Dapr building block; pub/sub for event-driven messaging
 - [[wiki/tech/dapr-jobs]] — scheduled job execution, also via the Client SDK
+- [[wiki/tech/temporal]] — the durable-execution platform Dapr Workflows is conceptually descended from; same Workflow/Activity/Worker model
 **Raw sources:**
 - [[raw/ingested/articles/Quickstart Workflow]]
 - [[raw/ingested/articles/How to Author a workflow]]

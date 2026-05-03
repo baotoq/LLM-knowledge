@@ -127,3 +127,12 @@ Parse with: `grep "^## \[" log.md`
 - Created `wiki/tech/dapr-workflows.md` — worker pattern: register workflow/activity functions, start worker, schedule/wait via client
 - Created `wiki/tech/dapr-jobs.md` — alpha Jobs API: cron scheduling, retry policy, TTL via `ScheduleJobAlpha1`
 - Updated `index.md` — added dapr-workflows, dapr-jobs to Tech section; added both raw files to Raw Sources Ingested
+
+## [2026-05-04] ingest | Temporal Platform — core application + Workflows/Activities Go SDK indexes
+
+- Created `wiki/tech/temporal.md` — Temporal core primitives (Workflow/Activity/Worker), Go SDK Workflow surface (basics, child, continue-as-new, cancellation, timeouts, message passing, selectors, side effects, schedules, timers, dynamic, versioning) and Activity surface (basics, execution, standalone, timeouts, async completion, dynamic, benign exceptions); side-by-side comparison vs Dapr Workflows (deployment model, state stores, versioning, standalone activities, signals/queries, selectors, multi-app, CLI)
+- Updated `wiki/tech/dapr-workflows.md` — added cross-reference to temporal in See also (descendant relationship)
+- Moved `raw/articles/Activities - Go SDK  Temporal Platform Documentation.md` → `raw/ingested/articles/`
+- Moved `raw/articles/Core application - Temporal feature  Temporal Platform Documentation.md` → `raw/ingested/articles/`
+- Moved `raw/articles/Workflows - Go SDK  Temporal Platform Documentation.md` → `raw/ingested/articles/`
+- Updated `index.md` — added temporal to Tech section; added all three raw files to Raw Sources Ingested
